@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Free Online School</title>
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll("[data-translate]");
+            const translations = {
+                "en": { "title": "AI-Powered Free Online School", "math": "Math Section", "english": "English Section", "welcome": "Welcome to AI Learning!" },
+                "id": { "title": "Sekolah Online Gratis Berbasis AI", "math": "Bagian Matematika", "english": "Bagian Bahasa Inggris", "welcome": "Selamat datang di AI Learning!" },
+                "es": { "title": "Escuela en Línea Gratuita con IA", "math": "Sección de Matemáticas", "english": "Sección de Inglés", "welcome": "¡Bienvenido a AI Learning!" }
+            };
+            
+            elements.forEach(el => {
+                el.innerText = translations[lang][el.getAttribute("data-translate")];
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1 data-translate="title">AI-Powered Free Online School</h1>
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('id')">Bahasa Indonesia</button>
+    <button onclick="changeLanguage('es')">Español</button>
+    
+    <h2 data-translate="welcome">Welcome to AI Learning!</h2>
+    <div>
+        <h3 data-translate="math">Math Section</h3>
+        <p>Coming soon...</p>
+    </div>
+    <div>
+        <h3 data-translate="english">English Section</h3>
+        <p>Coming soon...</p>
+    </div>
+</body>
+</html>
